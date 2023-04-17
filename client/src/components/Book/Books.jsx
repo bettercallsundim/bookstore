@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-const URL = "http://localhost:5000/books";
+const URL = "https://bookstore-server-ten.vercel.app/books";
 import axios from "axios";
 import { Book } from "./Book";
 
@@ -18,7 +18,6 @@ export const Books = () => {
 
   return (
     <div>
-
       <ul className="flex gap-8 flex-wrap pl-12 pt-8">
         {books &&
           books.map((book, ind) => {
