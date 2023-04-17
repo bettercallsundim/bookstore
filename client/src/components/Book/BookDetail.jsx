@@ -13,7 +13,9 @@ export const BookDetail = () => {
   const { id } = useParams();
   // const [book, setbook] = useState(init);
   async function fetchDetails() {
-    return await axios.get(`http://localhost:5000/books/${id}`);
+    return await axios.get(
+      `https://bookstore-server-ten.vercel.app/books/${id}`
+    );
   }
   const [inputs, setinputs] = useState(init);
   useEffect(() => {
@@ -31,10 +33,13 @@ export const BookDetail = () => {
     }));
   }
   async function updateBook() {
-    return await axios.put(`http://localhost:5000/books/${id}`, {
-      ...inputs,
-      available: checked,
-    });
+    return await axios.put(
+      `https://bookstore-server-ten.vercel.app/books/${id}`,
+      {
+        ...inputs,
+        available: checked,
+      }
+    );
   }
   function handleSubmit(e) {
     e.preventDefault();

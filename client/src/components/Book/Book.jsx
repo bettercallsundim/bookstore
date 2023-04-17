@@ -6,7 +6,9 @@ export const Book = (props) => {
   const { _id, name, description, author, price, available, image } =
     props.book;
   async function handleDelete() {
-    return await axios.delete(`http://localhost:5000/books/${_id}`);
+    return await axios.delete(
+      `https://bookstore-server-ten.vercel.app/books/${_id}`
+    );
   }
   const navigate = useNavigate();
   function handleUpdate() {

@@ -18,7 +18,7 @@ export const AddBook = () => {
     }));
   }
   async function postBook() {
-    return await axios.post("http://localhost:5000/books", {
+    return await axios.post("https://bookstore-server-ten.vercel.app/books", {
       ...inputs,
       available: checked,
     });
